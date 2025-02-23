@@ -1,6 +1,6 @@
 import streamlit as st
 import streamlit.components.v1 as components
-from  code_snippet import code_snippets
+from  code_snippet import code_snippets,allowed_globals
 import os
 
 st.set_page_config(page_title="Streamlit Live Code Preview",
@@ -40,7 +40,7 @@ with col2:
     st.markdown("---")
     if user_code:
         try:
-            exec(user_code, {"st": st})
+            exec(user_code, allowed_globals)
         except Exception as e:
             st.error(f"Error in execution: {e}")
     
