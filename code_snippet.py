@@ -1,5 +1,5 @@
 code_snippets = {
-    "Hello World": """import streamlit as st
+    "Hello Streamlit": """import streamlit as st
 st.title("Hello, Streamlit Preview!")""",
     
      "user input": """import streamlit as st
