@@ -1,6 +1,6 @@
 code_snippets = {
     "Hello World": """import streamlit as st
-st.title("Hello, Streamlit!")""",
+st.title("Hello, Streamlit Preview!")""",
     
      "user input": """import streamlit as st
 st.write("Here write your code")""",
