@@ -60,6 +60,8 @@ with left:
 with right:
     if st.button('💫Do magic🪄',key="do_magic"):
         st.session_state.show_me = not st.session_state.show_me
+    else:
+        st.warning("Preview hidden by default. Click '��Do magic���' to show.")
     
     
 st.markdown("---")
