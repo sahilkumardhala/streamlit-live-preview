@@ -1,4 +1,5 @@
 import streamlit as st
+from stlite_sandbox import stlite_sandbox
 import streamlit.components.v1 as components
 from  code_snippet import code_snippets
 import os
@@ -6,43 +7,70 @@ import os
 st.set_page_config(page_title="Streamlit Live Code Preview",
                      page_icon="random",
                     layout="wide",
-                    initial_sidebar_state="expanded")
+                    initial_sidebar_state="collapsed"
+                    )
 st.logo("https://streamlit.io/images/brand/streamlit-mark-color.png")
 st.title("Streamlit Live Code Preview")
+st.markdown("---")
+# css for text areas
+st.markdown("""
+    <style>
+    /* Default height for laptops and desktops */
+    .stTextArea textarea {
+        height: 200px;
+    }
+
+    /* Adjust height for mobile devices */
+    @media (max-width: 600px) {
+        .stTextArea textarea {
+            height: 100px;
+        }
+    }
+    </style>
+    """, unsafe_allow_html=True)
 
 # st.sidebar.
 # st.markdown("---")
-col1, col2 = st.columns(2)
-with col1:
-    left, right = st.columns([2, 1])
-    with left:
-        st.subheader("Streamlit code Snippets 📚")
-    with right:
-        selected_code = st.selectbox("🔍Choose an example or input:", 
-                                     list(code_snippets.keys()),
-                                     help="Select a code snippet to preview")
-    
-    user_code = st.text_area("📝Edit or past your Streamlit script:", 
-                             code_snippets[selected_code], 
-                             height=450,
-                             help="Enter your Streamlit code snippet\
-                                by selecting user input in ")
-    
+# col1, col2 = st.columns(2)
+# with col1:
+left, right = st.columns([2, 1])
+with left:
+    st.subheader("Streamlit code Snippets 📚")
+with right:
+    selected_code = st.selectbox("🔍Choose an example or input:", 
+                                    list(code_snippets.keys()),
+                                    help="Select a code snippet to preview")
 
-with col2:
-    left, right = st.columns([3, 1])
-    
-    with left:
-        st.subheader("Streamlit.io Preview🔮")
+user_code = st.text_area("📝Edit or past your Streamlit script:", 
+                            code_snippets[selected_code], 
+                            height=300,
+                            help="Enter your Streamlit code snippet\
+                            by selecting user input in ")
 
-    with right:
-        st.button('💫Do magic🪄',key="do_magic")
-    st.markdown("---")
-    if user_code:
-        try:
-            exec(user_code, {"st": st})
-        except Exception as e:
-            st.error(f"Error in execution: {e}")
+# Sidebar with live preview of the code
+if 'show_me' not in st.session_state:
+    st.session_state.show_me = False
+st.markdown("---")
+# with col2:
+left, right = st.columns([2, 1])
+
+with left:
+    st.subheader("Streamlit.io Preview🔮")
+
+with right:
+    if st.button('💫Do magic🪄',key="do_magic"):
+        st.session_state.show_me = not st.session_state.show_me
+    
+    
+st.markdown("---")
+if user_code:
+    try:
+        # Display the markdown content if visible
+        if st.session_state.show_me:
+            stlite_sandbox(user_code)
+    except Exception as e:
+
+        st.error(f"Error in execution: {e}")
     
 # Function to read the any file
 def get_file_content_as_string(path: str) -> str:
