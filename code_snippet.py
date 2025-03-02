@@ -2,7 +2,8 @@
 code_snippets = {
     "Hello Streamlit": """import streamlit as st
 st.title("Hello, Streamlit Preview!")
-st.info("I am a streamlit preview application. Here, I am streaming the Livepreview of your `Streamlit_app.py` application")""",
+st.subheader("I am a streamlit preview application. Here, I am streaming the Livepreview of your `Streamlit_app.py` application.")
+st.info("Streamlit Live Code Preview is an interactive web-based tool that allows users to write, edit, and execute Python code dynamically within a Streamlit application. It is designed for real-time code execution, making it a powerful tool for learning, debugging, and experimenting with Streamlit scripts.")""",
     
      "user input": """import streamlit as st
 st.write("Here write your code")""",

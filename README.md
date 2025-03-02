@@ -17,7 +17,7 @@ To run this project locally, follow these steps:
 
 1. Clone this repository:
    ```sh
-   git clone https://github.com/your-repository/streamlit-live-preview.git
+   git clone https://github.com/sahilkumardhala/streamlit-live-preview.git
    ```
 2. Navigate into the project directory:
    ```sh
@@ -46,6 +46,8 @@ streamlit-live-preview/
 │-- setup.md               # Instructions for setup & usage
 │-- README.md              # Project documentation
 │-- code_snippet.py        # Predefined Streamlit code snippets
+│-- logo.jpg                # Project logo
+│-- with_sidebar.jpg        # Project screenshot with sidebar
 ```
 
 ## Contributing

@@ -60,8 +60,6 @@ with left:
 with right:
     if st.button('💫Do magic🪄',key="do_magic"):
         st.session_state.show_me = not st.session_state.show_me
-    else:
-        st.warning("Preview hidden by default. Click '��Do magic���' to show.")
     
     
 st.markdown("---")
@@ -70,6 +68,8 @@ if user_code:
         # Display the markdown content if visible
         if st.session_state.show_me:
             stlite_sandbox(user_code)
+        else:
+            st.warning("Preview hidden by default. Click '��Do magic���' to show.")
     except Exception as e:
 
         st.error(f"Error in execution: {e}")
@@ -87,3 +87,10 @@ def show_render_file(file_path):
     st.sidebar.markdown(get_file_content_as_string(f"{file_path}"))
 
 show_render_file("setup.md")
+
+
+
+# Footer
+st.markdown("---")
+st.markdown("Copyright 2025. All Rights Reserved.")
+st.markdown("[Streamlit Prerviews](https://github.com/sahilkumardhala)")
