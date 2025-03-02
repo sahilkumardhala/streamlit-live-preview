@@ -2,7 +2,7 @@
 code_snippets = {
     "Hello Streamlit": """import streamlit as st
 st.title("Hello, Streamlit Preview!")
-st.info("I am a streamlit preview application.Here, I am streaming the Livepreview of your `Streamlit_app.py` application")""",
+st.info("I am a streamlit preview application. Here, I am streaming the Livepreview of your `Streamlit_app.py` application")""",
     
      "user input": """import streamlit as st
 st.write("Here write your code")""",
