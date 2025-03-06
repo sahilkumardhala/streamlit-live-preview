@@ -7,7 +7,7 @@ import os
 st.set_page_config(page_title="Streamlit Live Code Preview",
                      page_icon="random",
                     layout="wide",
-                    initial_sidebar_state="collapsed"
+                    initial_sidebar_state="auto"
                     )
 st.logo("https://streamlit.io/images/brand/streamlit-mark-color.png")
 st.title("Streamlit Live Code Preview")
@@ -70,7 +70,7 @@ if user_code:
             stlite_sandbox(user_code)
         else:
             st.warning("Preview hidden by default. Click '��Do magic���' to show.")
-            <a href="https://www.producthunt.com/posts/streamlit-preview?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-streamlit&#0045;preview" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=938526&theme=light&t=1741278956797" alt="Streamlit&#0032;Preview - Live&#0032;preview&#0032;of&#0032;your&#0032;streamlit&#0032;app&#0032;in&#0032;Browser&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+            st.markdown("""<a href="https://www.producthunt.com/posts/streamlit-preview?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-streamlit&#0045;preview" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=938526&theme=light&t=1741278956797" alt="Streamlit&#0032;Preview - Live&#0032;preview&#0032;of&#0032;your&#0032;streamlit&#0032;app&#0032;in&#0032;Browser&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>""", unsafe_allow_html=True)
     except Exception as e:
 
         st.error(f"Error in execution: {e}")
