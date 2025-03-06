@@ -88,6 +88,7 @@ def show_render_file(file_path):
     st.sidebar.markdown(get_file_content_as_string(f"{file_path}"))
 
 st.sidebar.header('STREAMLIT PREVIEW')
+st.sidebar.markdown('___')
 show_render_file("setup.md")
 
 st.sidebar.markdown("""<a href="https://www.producthunt.com/posts/streamlit-preview?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-streamlit&#0045;preview" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=938526&theme=light&t=1741278956797" alt="Streamlit&#0032;Preview - Live&#0032;preview&#0032;of&#0032;your&#0032;streamlit&#0032;app&#0032;in&#0032;Browser&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>""", unsafe_allow_html=True)
