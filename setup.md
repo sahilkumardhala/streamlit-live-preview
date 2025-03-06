@@ -1,4 +1,4 @@
-# Setup & Usage Guide:
+## Setup & Usage Guide:
 ---
 ## Introduction
 Welcome to the **Streamlit Live Code Preview** app! This tool allows users to write, edit, and preview Streamlit scripts dynamically. You can either select a pre-defined code snippet or input your own Streamlit script.
