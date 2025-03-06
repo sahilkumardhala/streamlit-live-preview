@@ -87,7 +87,7 @@ def show_render_file(file_path):
     # file_name = os.path.splitext(file_path)[0] # Remove file extension
     st.sidebar.markdown(get_file_content_as_string(f"{file_path}"))
 
-st.sidebar.header('STREAMLIT PREVIEW')
+st.sidebar.title('STREAMLIT PREVIEW')
 st.sidebar.markdown('___')
 show_render_file("setup.md")
 
