@@ -1,5 +1,5 @@
 
-<iframe style="border: none;" src="https://cards.producthunt.com/cards/posts/938526?v=1" width="500" height="405" frameborder="0" scrolling="no" allowfullscreen></iframe>
+![Product card](Productcard.avif)
 
 <a href="https://www.producthunt.com/posts/streamlit-preview?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-streamlit&#0045;preview" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=938526&theme=light&t=1741278956797" alt="Streamlit&#0032;Preview - Live&#0032;preview&#0032;of&#0032;your&#0032;streamlit&#0032;app&#0032;in&#0032;Browser&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
