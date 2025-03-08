@@ -1,4 +1,5 @@
-![logo](logo.jpg)
+
+<iframe style="border: none;" src="https://cards.producthunt.com/cards/posts/938526?v=1" width="500" height="405" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
 <a href="https://www.producthunt.com/posts/streamlit-preview?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-streamlit&#0045;preview" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=938526&theme=light&t=1741278956797" alt="Streamlit&#0032;Preview - Live&#0032;preview&#0032;of&#0032;your&#0032;streamlit&#0032;app&#0032;in&#0032;Browser&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
@@ -6,13 +7,11 @@
 Streamlit Live Code Preview is an interactive web-based tool that allows users to write, edit, and execute Python code dynamically within a Streamlit application. It is designed for real-time code execution, making it a powerful tool for learning, debugging, and experimenting with Streamlit scripts.
 
 
-
 ## Features
 - **Live Code Editing**: Modify or paste your Streamlit code in a text editor.
 - **Predefined Code Snippets**: Choose from a set of built-in Streamlit examples.
 - **Real-time Preview**: Execute and view your script output instantly.
 - **Error Handling**: Displays execution errors to help debugging.
-
 
 ## Installation
 To run this project locally, follow these steps:
@@ -33,6 +32,9 @@ To run this project locally, follow these steps:
    ```sh
    streamlit run app.py
    ```
+
+![logo](logo.jpg)
+
 ![logo](with_sidebar.jpg)
 ## Usage Guide
 1. Select a predefined code snippet from the dropdown or enter your own Streamlit script.
